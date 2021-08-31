@@ -1,0 +1,35 @@
+<h3> This is a partial </h3>
+
+<%= form_with model:student do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %> <br>
+    <% student.errors.full_messages_for(:name).each do |message| %>
+        <%= message %>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %> <br>
+    <% student.errors.full_messages_for(:address).each do |message| %>
+        <%= message %>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %> <br>
+    <% student.errors.full_messages_for(:email).each do |message| %>
+        <%= message %>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :phone %><br>
+    <%= form.text_field :phone %> <br>
+    <% student.errors.full_messages_for(:phone).each do |message| %>
+        <%= message %>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <%= form.submit %>
+<% end %>

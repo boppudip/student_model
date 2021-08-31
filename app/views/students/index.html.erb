@@ -1,0 +1,14 @@
+<h1> List of Students </h1>
+
+<% @students.each do |student| %>
+    <%= student.name %> <br>
+    <%= student.address %> <br>
+    <%= student.email %> <br>
+    <%= student.phone %> <br>
+    <p>---------------------------</p>
+<% end %>
+<br>
+<br>
+<%= link_to "New", new_student_path %>
+
+<%= will_paginate @students %>
